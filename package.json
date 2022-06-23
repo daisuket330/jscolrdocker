@@ -1,0 +1,11 @@
+{
+  "name":"color-flipper",
+  "version": "1.0",
+  "scripts": {
+    "start": "npm start"
+  },
+  "dependencies": {
+    "node": "^18.4.0",
+    "nodemon": "^2.0.16"
+  }
+}

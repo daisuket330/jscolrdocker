@@ -1,0 +1,24 @@
+version: '1.1'
+
+services:
+  node:
+    container_name: jsapp
+    image: jsapp
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - jsapp-network
+     
+    volumes:
+      - ./vol:/var/www/vol
+    environment:
+      - NODE_ENV=development
+      - APP_VERSION=1.1
+    
+networks:
+      jsapp-network:
+        driver: bridge 
+
